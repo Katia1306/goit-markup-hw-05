@@ -702,6 +702,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate(-50%, -50%) scale(1);
   width: 408px;
   min-height: 584px;
+  padding: 72px 24px 24px 24px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -719,9 +720,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--logo-color-dark);
   margin-bottom: 16px;
   }
-.modal-form-name
-.modal-form-phone
-.modal-form-email {
+.modal-form-name {
   margin-bottom: 8px;
 }
 .modal-label {
@@ -745,8 +744,11 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .modal-input:focus { 
-    border-color: #4D5AE5;
+
+  .modal-input:hover .modal-icon,
+  .modal-input:focus .modal-icon
+   { 
+    fill: #4D5AE5;
   }
   .modal-icon {
     position: absolute;
@@ -756,9 +758,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   }
-  .modal-icon:focus {
-    fill: #4D5AE5;
-  }
+ 
 .mdl-comment {
   margin-bottom: 16px;
 
@@ -804,7 +804,8 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   justify-content: center;
   fill: transparent;
 }
-.checkbox-input:checked
+.checkbox-input:checked + 
+.checkbox-label
 .checkbox-span {
   background-color: var(--violet);
   border: none;
